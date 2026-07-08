@@ -1,0 +1,123 @@
+.home-credibility-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 40px;
+  flex-wrap: wrap;
+  text-align: center;
+}
+
+.cred-usp-block {
+  position: relative;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+
+.cred-usp-block img {
+  width: 100%;
+  max-width: 60px;
+  display: block;
+}
+
+.cred-usp-block h3 {
+  font-size: 1.2rem;
+  margin: 0;
+  color: #fff;
+  font-weight: 600;
+}
+
+.cred-usp-block:hover {
+  transform: translateY(-5px);
+}
+
+/* Tooltip Popup */
+.cred-usp-popup {
+  position: absolute;
+  bottom: 90%; /* Tooltip appears above */
+  left: 50%;
+  transform: translateX(-50%);
+  background: #fff;
+  color: #282B35;
+  padding: 12px 15px;
+  border-radius: 8px;
+  width: 250px;
+  font-size: 0.9rem;
+  text-align: center;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s ease;
+  z-index: 99; /* Ensures tooltip stays above everything */
+}
+
+.cred-usp-popup::after {
+  content: "";
+  position: absolute;
+  bottom: -16px; /* Arrow now points downward */
+  left: 50%;
+  transform: translateX(-50%);
+  border-width: 8px;
+  border-style: solid;
+  border-color: #fff transparent transparent transparent;
+  z-index: 999;
+}
+
+.cred-usp-block:hover .cred-usp-popup {
+  opacity: 1;
+  visibility: visible;
+  transform: translateX(-50%) translateY(-5px); /* Subtle float-up effect */
+}
+
+.cred-popup-title {
+  font-weight: 700;
+  margin-bottom: 6px;
+  font-size: 1rem;
+  color: #282B35 !important;
+}
+
+.cred-text-mobile {
+  display: none;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .home-credibility-container {
+    flex-direction: column;
+    gap: 25px;
+  }
+
+      .cred-usp-block {
+        max-width: 100%;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+  .cred-usp-popup {
+    width: 80%;
+    bottom: 105%;
+    display: none;
+  }
+
+  .cred-text-desktop {
+    display: none;
+  }
+
+  .cred-text-mobile {
+    display: inline;
+    color: #fff;
+  }
+}
+
+/* Optional enhancement for mobile tap behavior */
+@media (hover: none) {
+  .cred-usp-block:hover .cred-usp-popup {
+    opacity: 0;
+    visibility: hidden;
+  }
+  .cred-usp-block.active .cred-usp-popup {
+    opacity: 1;
+    visibility: visible;
+  }
+}
