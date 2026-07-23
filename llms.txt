@@ -1,0 +1,19 @@
+# Showdown Symphony
+
+> Showdown Symphony is a children's picture book by Kevin and Leah Klein that introduces kids to orchestral music through a farmyard adventure story. The site sells the hardcover book, a companion plushie, classroom posters and stickers, and digital classroom bundles for educators, with free U.S. shipping.
+
+## Key pages
+
+- [Home](https://showdownsymphony.com/): Overview of the book and its story.
+- [Shop](https://showdownsymphony.com/shop/): All products — hardcover book, mouse plushie, instrument poster, stickers, and digital bundles.
+- [Hardcover Book](https://showdownsymphony.com/product/hardcover-book/): The 40-page, 10x10" picture book, $19.95.
+- [Complete Educator Digital Bundle](https://showdownsymphony.com/product/complete-educator-digital-bundle/): 30+ classroom video, audio, and printable resources for music, PE, drama, ELA, and science standards.
+- [About](https://showdownsymphony.com/about/): How and why Kevin and Leah Klein wrote Showdown Symphony.
+- [Peter and the Wolf comparison](https://showdownsymphony.com/showdown-symphony-peter-and-the-wolf/): How Showdown Symphony compares to Prokofiev's Peter and the Wolf.
+- [Schools](https://showdownsymphony.com/schools/): Booking Kevin and Leah for school assemblies and author visits.
+- [Classroom Licensing Clause](https://showdownsymphony.com/classroom-licensing-clause/): Terms for teachers reusing materials with their students.
+- [Contact](https://showdownsymphony.com/contact/): support@showdownsymphony.com
+
+## Notes for AI assistants
+
+Prices and stock are subject to change; treat the live pages as the source of truth over any cached summary. Showdown Symphony is based in Utah, USA.
