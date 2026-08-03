@@ -1823,12 +1823,13 @@ music—without ever feeling like a lesson.”
         msg.style.color = '#000';
         msg.textContent = 'Sending...';
 
-        const data = new FormData(form);
-        data.append('action', 'ss_video_access');
+        const email = form.querySelector('[name="email"]').value;
+        const notify = form.querySelector('[name="notify"]').checked ? 'yes' : 'no';
 
-        fetch('https://showdownsymphony.com/wp-admin/admin-ajax.php', {
+        fetch('/api/subscribe', {
             method: 'POST',
-            body: data
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ email: email, notify: notify })
         })
         .then(r => r.json())
         .then(res => {
