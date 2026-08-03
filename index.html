@@ -510,7 +510,7 @@ var woocommerce_params = {"ajax_url":"https://showdownsymphony.com/wp-admin/admi
 		<div class="elementor-element elementor-element-33308df e-con-full e-flex e-con e-child" data-id="33308df" data-element_type="container" data-e-type="container">
 				<div class="elementor-element elementor-element-dcc946f elementor-widget elementor-widget-image" data-id="dcc946f" data-element_type="widget" data-e-type="widget" data-widget_type="image.default">
 				<div class="elementor-widget-container">
-																<a href="#elementor-action%3Aaction%3Dpopup%3Aopen%26settings%3DeyJpZCI6IjEyNTUiLCJ0b2dnbGUiOmZhbHNlfQ%3D%3D">
+																<a href="#elementor-action%3Aaction%3Dpopup%3Aopen%26settings%3DeyJpZCI6IjEyNTUiLCJ0b2dnbGUiOmZhbHNlfQ%3D%3D" onclick="ssOpenBoughtBookPopup(event)">
 							<img loading="lazy" decoding="async" width="500" height="133" src="https://showdownsymphony.com/wp-content/uploads/2026/01/FinalBoughtTheBookButton.png" class="elementor-animation-grow attachment-full size-full wp-image-1534" alt="Buy the Book button">								</a>
 															</div>
 				</div>
@@ -2052,6 +2052,79 @@ function ssPlayVideo(wrapper) {
         'allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" ' +
         'allowfullscreen></iframe>';
 }
+</script>
+
+<style>
+[data-elementor-id="1255"] {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow-y: auto;
+    background: rgba(0,0,0,.8);
+    z-index: 999999;
+    box-sizing: border-box;
+    padding: 40px 20px;
+}
+[data-elementor-id="1255"].ss-popup-visible {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.ss-popup-close {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: #953D32;
+    color: #fff;
+    font-size: 24px;
+    line-height: 40px;
+    text-align: center;
+    cursor: pointer;
+    z-index: 1000000;
+}
+</style>
+<script>
+function ssOpenBoughtBookPopup(e) {
+    if (e) e.preventDefault();
+    var popup = document.querySelector('[data-elementor-id="1255"]');
+    if (!popup) return;
+    if (!popup.querySelector('.ss-popup-close')) {
+        var closeBtn = document.createElement('div');
+        closeBtn.className = 'ss-popup-close';
+        closeBtn.innerHTML = '&times;';
+        closeBtn.setAttribute('role', 'button');
+        closeBtn.setAttribute('aria-label', 'Close');
+        closeBtn.onclick = function() {
+            popup.classList.remove('ss-popup-visible');
+            document.body.style.overflow = '';
+        };
+        popup.prepend(closeBtn);
+    }
+    popup.classList.add('ss-popup-visible');
+    document.body.style.overflow = 'hidden';
+}
+document.addEventListener('keydown', function(e) {
+    if (e.key === 'Escape') {
+        var popup = document.querySelector('[data-elementor-id="1255"].ss-popup-visible');
+        if (popup) {
+            popup.classList.remove('ss-popup-visible');
+            document.body.style.overflow = '';
+        }
+    }
+});
+document.addEventListener('click', function(e) {
+    var popup = document.querySelector('[data-elementor-id="1255"].ss-popup-visible');
+    if (popup && e.target === popup) {
+        popup.classList.remove('ss-popup-visible');
+        document.body.style.overflow = '';
+    }
+});
 </script>
 
 </body>
