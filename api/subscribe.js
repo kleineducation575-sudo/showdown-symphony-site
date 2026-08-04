@@ -34,8 +34,8 @@ module.exports = async (req, res) => {
         from: 'Showdown Symphony <onboarding@resend.dev>',
         to: [email],
         subject: 'Your Showdown Symphony Video Access Link',
-        text: `Thanks for your interest in Showdown Symphony!\n\nHere is your video: ${VIDEO_LINK}\n\nEnjoy!\nShowdown Symphony`,
-        html: `<p>Thanks for your interest in Showdown Symphony!</p><p>Here is your video: <a href="${VIDEO_LINK}">${VIDEO_LINK}</a></p><p>Enjoy!<br>Showdown Symphony</p>`,
+        text: `Thanks for your interest in Showdown Symphony!\n\nHere is your video: ${VIDEO_LINK}\n\nEnjoy!\nKevin and Leah Klein`,
+        html: `<p>Thanks for your interest in Showdown Symphony!</p><p>Here is your video: <a href="${VIDEO_LINK}">${VIDEO_LINK}</a></p><p>Enjoy!<br>Kevin and Leah Klein</p>`,
       }),
       sendEmail({
         from: 'Showdown Symphony <onboarding@resend.dev>',
