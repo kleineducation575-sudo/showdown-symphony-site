@@ -31,14 +31,14 @@ module.exports = async (req, res) => {
   try {
     const [visitorResponse, ownerResponse] = await Promise.all([
       sendEmail({
-        from: 'Showdown Symphony <onboarding@resend.dev>',
+        from: 'Kevin and Leah Klein <kevin@showdownsymphony.com>',
         to: [email],
         subject: 'Your Showdown Symphony Video Access Link',
         text: `Thanks for your interest in Showdown Symphony!\n\nHere is your video: ${VIDEO_LINK}\n\nEnjoy!\nKevin and Leah Klein`,
         html: `<p>Thanks for your interest in Showdown Symphony!</p><p>Here is your video: <a href="${VIDEO_LINK}">${VIDEO_LINK}</a></p><p>Enjoy!<br>Kevin and Leah Klein</p>`,
       }),
       sendEmail({
-        from: 'Showdown Symphony <onboarding@resend.dev>',
+        from: 'Kevin and Leah Klein <kevin@showdownsymphony.com>',
         to: ['kleineducation575@gmail.com'],
         subject: 'New video access request - Showdown Symphony',
         text: `A visitor requested the video access link.\n\nEmail: ${email}\nWants updates/deals: ${notify === 'yes' ? 'Yes' : 'No'}`,
